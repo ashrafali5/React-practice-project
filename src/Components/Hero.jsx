@@ -25,8 +25,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center mt-10 mb-10 gap-5 ">
-        <button className="btn">Calculator</button>
-        <button className="btn">Profile Card</button>
+        <button className="btn">Counter</button>
+        <button className="btn">TodoList</button>
       </div>
     </div>
   );

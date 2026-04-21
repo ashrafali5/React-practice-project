@@ -22,5 +22,5 @@ body.dark {
   animation: fadeUp 0.8s ease-out forwards;
 }
 .btn {
-  @apply px-5 py-3 font-bold rounded-3xl bg-[#1A1953] cursor-pointer text-white hover:bg-blue-300 hover:text-black;
+  @apply px-5 py-3 rounded-3xl bg-[#1A1953] cursor-pointer text-white hover:bg-blue-300 hover:text-black;
 }
