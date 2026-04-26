@@ -1,9 +1,13 @@
 import React from "react";
 import developerImg from "../assets/developer.png";
-
+import { Link } from "react-router-dom";
+import { LuListTodo } from "react-icons/lu";
+import { TiStopwatch } from "react-icons/ti";
 const Hero = () => {
   return (
-    <div>
+    // Main Container
+    <div className="flex flex-col justify-center items-center">
+      {/* Hero section image and paragraph */}
       <div className=" fade-up flex flex-col px-8 lg:flex-row-reverse justify-between m-15 items-center gap-5">
         <div>
           <img src={developerImg} alt="developer-image" className="w-150" />
@@ -13,20 +17,43 @@ const Hero = () => {
             Clove<span className="text-blue-500">X</span>
           </h1>
           <p className="max-w-2xl text-gray-400 leading-9">
-            At CloveX, we turn ideas into powerful digital experiences using
-            cutting-edge web technologies. As a MERN stack developer, we
-            specialize in building fast, scalable, and user-friendly
-            applications with MongoDB, Express.js, React, and Node.js. Whether
-            it’s a dynamic web app or a full-scale platform, our focus is on
-            clean code, performance, and seamless user interaction. CloveX isn’t
-            just about development—it’s about crafting solutions that are
-            efficient, reliable, and built for the future.
+            CloveX is a collection of small, practical projects built to
+            strengthen real-world development skills. Each project focuses on
+            solving problems, improving logic, and creating clean user
+            interfaces. It’s a space where learning meets creativity and
+            consistent growth.
           </p>
         </div>
       </div>
-      <div className="flex justify-center mt-10 mb-10 gap-5 ">
-        <button className="btn">Counter</button>
-        <button className="btn">TodoList</button>
+      {/* Mini Projects */}
+      <div className="flex flex-col justify-center items-center gap-10">
+        <h1 className="text-4xl sm:text-5xl tracking-wider font-extrabold">
+          Mini <span className="text-blue-500">Projects</span>
+        </h1>
+        <div className=" max-w-4xl mx-auto mb-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
+          <Link to="/stopwatch">
+            <button className="btn flex flex-row items-center gap-2">
+              <span>
+                <TiStopwatch size={24} />
+              </span>
+              StopWatch
+            </button>
+          </Link>
+          <Link to="/todo">
+            <button className="btn flex flex-row items-center gap-2">
+              <span>
+                <LuListTodo size={24} />
+              </span>
+              TodoList
+            </button>
+          </Link>
+          <Link to="/calculator">
+            <button className="btn flex flex-row items-center gap-2">
+              <span>CLC</span>
+              Calculator
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

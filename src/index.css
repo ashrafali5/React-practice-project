@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 @import "tailwindcss";
 
-body {
-  @apply bg-white text-black;
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  }
 }
 
-body.dark {
-  @apply bg-[#2C2C2C] text-white;
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Inter", sans-serif;
 }
 
 @keyframes fadeUp {
@@ -24,3 +29,4 @@ body.dark {
 .btn {
   @apply px-5 py-3 rounded-3xl bg-[#1A1953] cursor-pointer text-white hover:bg-blue-300 hover:text-black;
 }
+

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ darkMod, setDarkMod }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,27 +23,27 @@ const Navbar = ({ darkMod, setDarkMod }) => {
         </div>
 
         <div className="h-auto hidden text-xl sm:flex sm:gap-10 md:gap-30 ">
-          <a
-            href="#home"
+          <Link
+            to="/home"
             onClick={() => setActive("home")}
             className={`pb-1 ${active === "home" ? "text-blue-500 border-b-2 border-blue-500" : "hover:text-blue-500 hover:border-b-2 hover:border-blue-500"}`}
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            to="/about"
             onClick={() => setActive("about")}
             className={`pb-1 ${active === "about" ? "text-blue-500 border-b-2 border-blue-500" : "hover:text-blue-500 hover:border-b-2 hover:border-blue-500"}`}
           >
             About
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             onClick={() => setActive("contact")}
             className={`pb-1 ${active === "contact" ? "text-blue-500 border-b-2 border-blue-500" : "hover:text-blue-500 hover:border-b-2 hover:border-blue-500"}`}
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         <div
@@ -56,27 +57,27 @@ const Navbar = ({ darkMod, setDarkMod }) => {
       <div className="flex absolute w-full z-50 top-20  items-center justify-center ">
         {isOpen && (
           <div className="flex flex-col text-white text-xl bg-black rounded-4xl px-20 py-8 justify-center items-center gap-5 hover:text-blue-500">
-            <a
-              href="#home"
+            <Link
+              to="/home"
               onClick={() => setActive("home")}
               className={`pb-1 ${active === "home" ? "text-blue-500 border-b-2 border-blue-500" : "hover:text-blue-500 hover:border-b-2 hover:border-blue-500 "}`}
             >
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               onClick={() => setActive("about")}
               className={`pb-1 ${active === "about" ? "text-blue-500 border-b-2 border-blue-500" : "hover:border-b-2 hover:border-blue-500 "}`}
             >
               About
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="#contact"
               onClick={() => setActive("contact")}
               className={`pb-1 ${active === "contact" ? "text-blue-500 border-b-2 border-blue-500" : "hover:border-b-2 hover:border-blue-500 "}`}
             >
               Contact
-            </a>
+            </Link>
             <div
               className="cursor-pointer text-xl sm:text-2xl md:text-3xl"
               onClick={() => setDarkMod(!darkMod)}
