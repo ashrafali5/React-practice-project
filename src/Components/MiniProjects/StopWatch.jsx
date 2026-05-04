@@ -22,7 +22,7 @@ const StopWatch = () => {
 
   return (
     <div className="flex items-center h-[90vh] justify-center">
-      <div className="h-[80vh] w-[40vh] sm:w-[50vh] lg:w-[60vh] bg-linear-to-br from-gray-900 to-gray-600 text-white dark:bg-linear-to-br dark:from-blue-950 dark:to-blue-600 flex flex-col justify-center items-center gap-10 rounded-4xl mx-5 sm:mx-auto px-2 sm:px-5 lg:px-8 transition-colors duration-1000 shadow-soft hover:scale-105 hover:transition-all hover:duration-500">
+      <div className="stopwatch-card shadow-soft">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono">
           {String(minutes).padStart(2, "0")} :{" "}
           {String(seconds).padStart(2, "0")} :{" "}

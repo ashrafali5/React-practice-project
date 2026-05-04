@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StopWatch from "./Components/StopWatch";
-import About from "./Components/About";
+import StopWatch from "./Components/MiniProjects/StopWatch";
+import DigitalClock from "./Components/MiniProjects/DigitalClock";
 
 const App = () => {
   const [darkMod, setDarkMod] = useState(false);
@@ -24,8 +24,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/home" element={<Hero />} />
-          <Route path="/about" element={<About />} />
           <Route path="/stopwatch" element={<StopWatch />} />
+          <Route path="/digitalClock" element={<DigitalClock />} />
         </Routes>
       </Router>
     </div>
